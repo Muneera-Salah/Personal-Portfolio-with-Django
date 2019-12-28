@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Muneera Salah Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="{% static 'album.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2"
+                        viewBox="0 0 24 24" focusable="false">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                        <circle cx="12" cy="13" r="4" /></svg>
+                    <strong>Muneera Salah Portfolio</strong>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+
+        <section class="jumbotron text-center">
+            <div class="container">
+                <img src="{% static 'SoftDevIcon.png' %}" />
+                <h1>Muneera Salah</h1>
+                <p class="lead text-muted">Full Stack Web Develpoer PHP:Laravel , Python:django, CMS: moodle , wordpress
+                    , mantisbt</p>
+                <p>
+                    <a href="https://github.com/Muneera-Salah/" target="_blank" class="btn btn-primary my-2">GitHub</a>
+                    <a href="https://www.behance.net/muneera_salah" class="btn btn-secondary my-2"
+                        target="_blank">behance</a>
+                </p>
+            </div>
+        </section>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Jobs Details</h1>
+                        <hr>
+                        <br/>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="{{ job.image.url }}" height="100px" />
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <p class="card-text">{{ job.summary }}</p>
+                                <div class="text-right">
+                                    <div class="btn-group">
+                                        <a href="{% url 'home' %}" type="button" class="btn btn-sm btn-outline-secondary">Back to home</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+        </div>
+    </footer>
+    <script src="{% static 'jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
